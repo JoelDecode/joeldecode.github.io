@@ -246,6 +246,113 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/14/利用jquery实现一个比较简单的轮播3/" itemprop="url">
+                  利用jquery实现一个比较简单的轮播
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-14T10:26:03+08:00" content="2016-10-14">
+              2016-10-14
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+  
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>还是先贴代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</div><div class="line">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;script src=&quot;http://libs.baidu.com/jquery/1.8.3/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">	&lt;style&gt;</div><div class="line">		*&#123;margin: 0;padding: 0&#125;</div><div class="line">		#slider&#123;width: 800px;height: 450px;display:block;margin: 0 auto;margin-top: 100px;border:1px solid #ddd;overflow: hidden;position: relative;&#125;</div><div class="line">		#slider li&#123;display: block;float: left;&#125;</div><div class="line">		#slider li img&#123;width: 800px;height: 450px;&#125;</div><div class="line">		#slider button.up&#123;position: absolute;top: 50%;z-index: 9;left: 20px;width: 50px;height: 50px;text-align: center;&#125;</div><div class="line">		#slider button.down&#123;position: absolute;top: 50%;z-index: 9;right: 20px;width: 50px;height: 50px;text-align: center;&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=&quot;slider&quot;&gt;</div><div class="line">		&lt;ul&gt;</div><div class="line">			&lt;li&gt;&lt;a href=&quot;&quot;&gt;[站外图片上传中……(1)]&lt;/a&gt;&lt;/li&gt;</div><div class="line">			&lt;li&gt;&lt;a href=&quot;&quot;&gt;[站外图片上传中……(2)]&lt;/a&gt;&lt;/li&gt;</div><div class="line">			&lt;li&gt;&lt;a href=&quot;&quot;&gt;[站外图片上传中……(3)]&lt;/a&gt;&lt;/li&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">		&lt;button class=&quot;up&quot;&gt;向上&lt;/button&gt;</div><div class="line">		&lt;button class=&quot;down&quot;&gt;向下&lt;/button&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    </div><div class="line">// Decode slider QQ:970220385</div><div class="line">var sliderWidth = $(&quot;#slider li&quot;).width();</div><div class="line">var sliderSize = $(&quot;#slider li&quot;).size();</div><div class="line">var sliderUl = $(&quot;#slider ul&quot;)</div><div class="line">sliderUl.width(sliderWidth*sliderSize);</div><div class="line">var timer</div><div class="line">function time()&#123;</div><div class="line">	timer=setInterval(function()&#123;</div><div class="line">		slider();</div><div class="line">	&#125;,3000);</div><div class="line">&#125;</div><div class="line">var i = 0</div><div class="line">function slider()&#123;</div><div class="line">	if (i&gt;=sliderSize-1) &#123;</div><div class="line">		i = 0</div><div class="line">	&#125; else &#123;</div><div class="line">		i ++</div><div class="line">	&#125;</div><div class="line">	sliderUl.stop().animate(&#123;marginLeft: -sliderWidth*i&#125;, 500);</div><div class="line">&#125;;</div><div class="line">	</div><div class="line">time()</div><div class="line">$(&quot;button.up&quot;).click(function(event) &#123;</div><div class="line">    if( i !== 0)&#123;</div><div class="line">        sliderUl.stop().animate(&#123;marginLeft: -(i-1)*sliderWidth&#125;, 500);</div><div class="line">        i --</div><div class="line">    &#125;else&#123;</div><div class="line">        i = sliderSize-1</div><div class="line">        sliderUl.stop().animate(&#123;marginLeft: -i*sliderWidth&#125;, 500);</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">	clearInterval(timer)</div><div class="line">	time();</div><div class="line">&#125;);</div><div class="line">$(&quot;button.down&quot;).click(function(event) &#123;</div><div class="line">	slider();</div><div class="line">	clearInterval(timer)</div><div class="line">	time();	</div><div class="line">&#125;);</div><div class="line"></div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>##大概思路</p>
+<p>实现思路差不多就是先建立一个定时器</p>
+<ol>
+<li><strong>对变量 i 进行每3s一次+1</strong></li>
+<li>然后<strong>获取页面中需要滚动的图片数量</strong></li>
+<li>利用<strong>margin-left乘以 i 配合animate</strong>进行动画滚动。</li>
+<li><strong>判断i的数值</strong>是否大于图片滚动的数量，如果大于将<strong>变量赋值0</strong></li>
+<li>左右按钮<strong>直接利用slider（）方法先强行执行一次动画并且i++</strong></li>
+<li>这时候大家会发现一个小bug，就是当你不停地点左右的时候就会出现滚动误差，所以这里我们<strong>用clearInterval(timer)方法去暂停一下原来的事件，再执行time（）</strong></li>
+</ol>
+<p>###总结：<br>大概就是利用了i的数值一个循环再判断的方法，十分简单，没有深入研究过代码简化，望有更好的方法解决，欢迎学习前端的朋友加我的qq.970220385  有什么不明白也可以一起交流探讨</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/13/css-奇葩伪类使用-target/" itemprop="url">
                   css 奇葩伪类使用:target
                 </a>
@@ -369,7 +476,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -379,7 +486,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
