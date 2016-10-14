@@ -1,0 +1,624 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="jquery," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="还是先贴代码
+ css 123456*&amp;#123;margin: 0;padding: 0&amp;#125;#slider&amp;#123;width: 800px;height: 450px;display:block;margin: 0 auto;margin-top: 100px;border:1px solid #ddd;overflow: hidden;position: relative;&amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用jquery实现一个比较简单的轮播">
+<meta property="og:url" content="http://yoursite.com/2016/10/14/利用jquery实现一个比较简单的轮播/index.html">
+<meta property="og:site_name" content="技术与生活">
+<meta property="og:description" content="还是先贴代码
+ css 123456*&amp;#123;margin: 0;padding: 0&amp;#125;#slider&amp;#123;width: 800px;height: 450px;display:block;margin: 0 auto;margin-top: 100px;border:1px solid #ddd;overflow: hidden;position: relative;&amp;#12">
+<meta property="og:updated_time" content="2016-10-14T03:16:38.314Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="利用jquery实现一个比较简单的轮播">
+<meta name="twitter:description" content="还是先贴代码
+ css 123456*&amp;#123;margin: 0;padding: 0&amp;#125;#slider&amp;#123;width: 800px;height: 450px;display:block;margin: 0 auto;margin-top: 100px;border:1px solid #ddd;overflow: hidden;position: relative;&amp;#12">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/14/利用jquery实现一个比较简单的轮播/"/>
+
+
+  <title> 利用jquery实现一个比较简单的轮播 | 技术与生活 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">技术与生活</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                利用jquery实现一个比较简单的轮播
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-14T10:26:03+08:00" content="2016-10-14">
+              2016-10-14
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+  
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>还是先贴代码</p>
+<p><strong> css </strong><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*&#123;<span class="attribute">margin</span>: <span class="number">0</span>;<span class="attribute">padding</span>: <span class="number">0</span>&#125;</div><div class="line"><span class="selector-id">#slider</span>&#123;<span class="attribute">width</span>: <span class="number">800px</span>;<span class="attribute">height</span>: <span class="number">450px</span>;<span class="attribute">display</span>:block;<span class="attribute">margin</span>: <span class="number">0</span> auto;<span class="attribute">margin-top</span>: <span class="number">100px</span>;<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ddd</span>;<span class="attribute">overflow</span>: hidden;<span class="attribute">position</span>: relative;&#125;</div><div class="line"><span class="selector-id">#slider</span> <span class="selector-tag">li</span>&#123;<span class="attribute">display</span>: block;<span class="attribute">float</span>: left;&#125;</div><div class="line"><span class="selector-id">#slider</span> <span class="selector-tag">li</span> <span class="selector-tag">img</span>&#123;<span class="attribute">width</span>: <span class="number">800px</span>;<span class="attribute">height</span>: <span class="number">450px</span>;&#125;</div><div class="line"><span class="selector-id">#slider</span> <span class="selector-tag">button</span><span class="selector-class">.up</span>&#123;<span class="attribute">position</span>: absolute;<span class="attribute">top</span>: <span class="number">50%</span>;<span class="attribute">z-index</span>: <span class="number">9</span>;<span class="attribute">left</span>: <span class="number">20px</span>;<span class="attribute">width</span>: <span class="number">50px</span>;<span class="attribute">height</span>: <span class="number">50px</span>;<span class="attribute">text-align</span>: center;&#125;</div><div class="line"><span class="selector-id">#slider</span> <span class="selector-tag">button</span><span class="selector-class">.down</span>&#123;<span class="attribute">position</span>: absolute;<span class="attribute">top</span>: <span class="number">50%</span>;<span class="attribute">z-index</span>: <span class="number">9</span>;<span class="attribute">right</span>: <span class="number">20px</span>;<span class="attribute">width</span>: <span class="number">50px</span>;<span class="attribute">height</span>: <span class="number">50px</span>;<span class="attribute">text-align</span>: center;&#125;</div></pre></td></tr></table></figure></p>
+<p><strong> html </strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"slider"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>[站外图片上传中……(1)]<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>[站外图片上传中……(2)]<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>[站外图片上传中……(3)]<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"up"</span>&gt;</span>向上<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"down"</span>&gt;</span>向下<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong> jquery </strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    </div><div class="line"><span class="comment">// Decode slider QQ:970220385</span></div><div class="line"><span class="keyword">var</span> sliderWidth = $(<span class="string">"#slider li"</span>).width();</div><div class="line"><span class="keyword">var</span> sliderSize = $(<span class="string">"#slider li"</span>).size();</div><div class="line"><span class="keyword">var</span> sliderUl = $(<span class="string">"#slider ul"</span>)</div><div class="line">sliderUl.width(sliderWidth*sliderSize);</div><div class="line"><span class="keyword">var</span> timer</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">time</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	timer=setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		slider();</div><div class="line">	&#125;,<span class="number">3000</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> i = <span class="number">0</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">slider</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span> (i&gt;=sliderSize<span class="number">-1</span>) &#123;</div><div class="line">		i = <span class="number">0</span></div><div class="line">	&#125; <span class="keyword">else</span> &#123;</div><div class="line">		i ++</div><div class="line">	&#125;</div><div class="line">	sliderUl.stop().animate(&#123;<span class="attr">marginLeft</span>: -sliderWidth*i&#125;, <span class="number">500</span>);</div><div class="line">&#125;;</div><div class="line">	</div><div class="line">time()</div><div class="line">$(<span class="string">"button.up"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>( i !== <span class="number">0</span>)&#123;</div><div class="line">        sliderUl.stop().animate(&#123;<span class="attr">marginLeft</span>: -(i<span class="number">-1</span>)*sliderWidth&#125;, <span class="number">500</span>);</div><div class="line">        i --</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        i = sliderSize<span class="number">-1</span></div><div class="line">        sliderUl.stop().animate(&#123;<span class="attr">marginLeft</span>: -i*sliderWidth&#125;, <span class="number">500</span>);</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">	clearInterval(timer)</div><div class="line">	time();</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"button.down"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">	slider();</div><div class="line">	clearInterval(timer)</div><div class="line">	time();	</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
+<p>#大概思路</p>
+<p>实现思路差不多就是先建立一个定时器</p>
+<ol>
+<li><strong>对变量 i 进行每3s一次+1</strong></li>
+<li>然后<strong>获取页面中需要滚动的图片数量</strong></li>
+<li>利用<strong>margin-left乘以 i 配合animate</strong>进行动画滚动。</li>
+<li><strong>判断i的数值</strong>是否大于图片滚动的数量，如果大于将<strong>变量赋值0</strong></li>
+<li>左右按钮<strong>直接利用slider（）方法先强行执行一次动画并且i++</strong></li>
+<li>这时候大家会发现一个小bug，就是当你不停地点左右的时候就会出现滚动误差，所以这里我们<strong>用clearInterval(timer)方法去暂停一下原来的事件，再执行time（）</strong></li>
+</ol>
+<p>###总结：<br>大概就是利用了i的数值一个循环再判断的方法，十分简单，没有深入研究过代码简化，望有更好的方法解决，欢迎学习前端的朋友加我的qq.970220385  有什么不明白也可以一起交流探讨</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jquery/" rel="tag">#jquery</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/13/css-奇葩伪类使用-target/" rel="next" title="css 奇葩伪类使用:target">
+                <i class="fa fa-chevron-left"></i> css 奇葩伪类使用:target
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/14/CSS初始化/" rel="prev" title="CSS初始化">
+                CSS初始化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="JoelDecode" />
+          <p class="site-author-name" itemprop="name">JoelDecode</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JoelDecode" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5451137236/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/chen-mo-67-19-64" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JoelDecode</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  
+</body>
+</html>
