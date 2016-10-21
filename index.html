@@ -323,11 +323,16 @@
 <p><input type="button" id="time" value="点击发送验证码" style="color:#fff;background-color:rgba(0,0,0,.7);text-align: center;border:none;font-size:50px;padding:70px;display: block;width:506px;"></p>
 <script>
 
-window.onload = function(){ 
     var i=60;
     var timer;
     var _this;
-    function time(){
+    var jqIf = setInterval(function (){
+    if(typeof jQuery == 'undefined'){
+        console.log('没加载jquery')
+    }else{
+        clearInterval(jqIf)
+        function time(){
+        _this.unbind("click")
         timer = setInterval(function(){
             i --;
             if(i==0){
@@ -337,15 +342,18 @@ window.onload = function(){
                 _this.bind("click",time)
             }else{
                 _this.val(i+"秒后重新发送")
-                _this.unbind("click")
+                console.log(_this)
             }
         },1000)
     };
     $("#time").click(function(){
         _this= $(this)
+        _this.val(i+"秒后重新发送")
         time()
     })
-};
+    }
+},1000)
+
 </script>
 
           

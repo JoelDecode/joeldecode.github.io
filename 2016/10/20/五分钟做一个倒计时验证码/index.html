@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="技术生活">
 <meta property="og:description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
 先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021var i=60;var timer;var _this;function time()&amp;#123;    t">
-<meta property="og:updated_time" content="2016-10-21T03:02:59.710Z">
+<meta property="og:updated_time" content="2016-10-21T06:06:53.428Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="五分钟做一个倒计时验证码">
 <meta name="twitter:description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
@@ -323,11 +323,16 @@
 <p><input type="button" id="time" value="点击发送验证码" style="color:#fff;background-color:rgba(0,0,0,.7);text-align: center;border:none;font-size:50px;padding:70px;display: block;width:506px;"></p>
 <script>
 
-window.onload = function(){ 
     var i=60;
     var timer;
     var _this;
-    function time(){
+    var jqIf = setInterval(function (){
+    if(typeof jQuery == 'undefined'){
+        console.log('没加载jquery')
+    }else{
+        clearInterval(jqIf)
+        function time(){
+        _this.unbind("click")
         timer = setInterval(function(){
             i --;
             if(i==0){
@@ -337,15 +342,18 @@ window.onload = function(){
                 _this.bind("click",time)
             }else{
                 _this.val(i+"秒后重新发送")
-                _this.unbind("click")
+                console.log(_this)
             }
         },1000)
     };
     $("#time").click(function(){
         _this= $(this)
+        _this.val(i+"秒后重新发送")
         time()
     })
-};
+    }
+},1000)
+
 </script>
 
       
