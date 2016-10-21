@@ -85,18 +85,18 @@
 
 
 <meta name="description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
-先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021var i=60;var timer;var _this;function time()&amp;#123;    t">
+先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021222324252627282930    var i=60;    var timer;    var _t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="五分钟做一个倒计时验证码">
 <meta property="og:url" content="http://yoursite.com/2016/10/20/五分钟做一个倒计时验证码/index.html">
 <meta property="og:site_name" content="技术生活">
 <meta property="og:description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
-先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021var i=60;var timer;var _this;function time()&amp;#123;    t">
-<meta property="og:updated_time" content="2016-10-21T06:06:53.428Z">
+先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021222324252627282930    var i=60;    var timer;    var _t">
+<meta property="og:updated_time" content="2016-10-21T06:51:39.339Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="五分钟做一个倒计时验证码">
 <meta name="twitter:description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
-先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021var i=60;var timer;var _this;function time()&amp;#123;    t">
+先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021222324252627282930    var i=60;    var timer;    var _t">
 
 
 
@@ -318,11 +318,10 @@
 
       
         <p>切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时<br>TvT</p>
-<h2>先贴代码</h2><br><b>HTML</b><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"time"</span> <span class="attr">value</span>=<span class="string">"点击发送验证码"</span>&gt;</span></div></pre></td></tr></table></figure><br><br><b>JQUERY</b><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i=<span class="number">60</span>;</div><div class="line"><span class="keyword">var</span> timer;</div><div class="line"><span class="keyword">var</span> _this;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">time</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        i --;</div><div class="line">        <span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</div><div class="line">            i=<span class="number">60</span></div><div class="line">            _this.val(<span class="string">"重新发送"</span>)</div><div class="line">            clearInterval(timer)</div><div class="line">            _this.bind(<span class="string">"click"</span>,time)</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            _this.val(i+<span class="string">"秒后重新发送"</span>)</div><div class="line">            _this.unbind(<span class="string">"click"</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;,<span class="number">1000</span>)</div><div class="line">&#125;;</div><div class="line">$(<span class="string">"#time"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    _this= $(<span class="keyword">this</span>)</div><div class="line">    time()</div><div class="line">&#125;)</div></pre></td></tr></table></figure><br><br><h2>实现思路</h2><br>1. 先搞一个变量 每秒自加一<br>2. 变量timer为了用clearInterval()清除重复执行的事件<br>3. 变量_this为了使time()里面的.val()方法找到对象<br>4. 当ID为time的input被点击时，执行方法，60s后自动停止这个事件<br>5. 当倒计时时用unbind方法取消绑定事件<br>6. 当演示结束重新绑定click事件<br><br><h2>Demo</h2>
+<h2>先贴代码</h2><br><b>HTML</b><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"time"</span> <span class="attr">value</span>=<span class="string">"点击发送验证码"</span>&gt;</span></div></pre></td></tr></table></figure><br><br><b>JQUERY</b><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">    <span class="keyword">var</span> i=<span class="number">60</span>;</div><div class="line">    <span class="keyword">var</span> timer;</div><div class="line">    <span class="keyword">var</span> _this;</div><div class="line">    <span class="keyword">var</span> jqIf = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> jQuery == <span class="string">'undefined'</span>)&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'没加载jquery'</span>)</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        clearInterval(jqIf)</div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">time</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        _this.val(i+<span class="string">"秒后重新发送"</span>)</div><div class="line">        _this.unbind(<span class="string">"click"</span>)</div><div class="line">        timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            i --;</div><div class="line">            <span class="keyword">if</span>(i==<span class="number">0</span>)&#123;</div><div class="line">                i=<span class="number">60</span></div><div class="line">                _this.val(<span class="string">"演示结束啦！"</span>)</div><div class="line">                clearInterval(timer)</div><div class="line">                _this.bind(<span class="string">"click"</span>,time)</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                _this.val(i+<span class="string">"秒后重新发送"</span>)</div><div class="line">                <span class="built_in">console</span>.log(_this)</div><div class="line">            &#125;</div><div class="line">        &#125;,<span class="number">1000</span>)</div><div class="line">    &#125;;</div><div class="line">    $(<span class="string">"#time"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        _this= $(<span class="keyword">this</span>)</div><div class="line">        time()</div><div class="line">    &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;,<span class="number">1000</span>)</div></pre></td></tr></table></figure><br><br><h2>实现思路</h2><br>1. 先搞一个变量 每秒自加一<br>2. 变量timer为了用clearInterval()清除重复执行的事件<br>3. 变量_this为了使time()里面的.val()方法找到对象<br>4. 当ID为time的input被点击时，执行方法，60s后自动停止这个事件<br>5. 当倒计时时用unbind方法取消绑定事件<br>6. 当演示结束重新绑定click事件<br><br><h2>Demo</h2>
 
 <p><input type="button" id="time" value="点击发送验证码" style="color:#fff;background-color:rgba(0,0,0,.7);text-align: center;border:none;font-size:50px;padding:70px;display: block;width:506px;"></p>
 <script>
-
     var i=60;
     var timer;
     var _this;
@@ -332,6 +331,7 @@
     }else{
         clearInterval(jqIf)
         function time(){
+        _this.val(i+"秒后重新发送")
         _this.unbind("click")
         timer = setInterval(function(){
             i --;
@@ -348,13 +348,14 @@
     };
     $("#time").click(function(){
         _this= $(this)
-        _this.val(i+"秒后重新发送")
         time()
     })
     }
 },1000)
 
 </script>
+
+<p></p><h5>2016.10.21更新</h5><br>新发现一种更简单的方式，<br><a href="http://josephfitzsimmons.com/writing-a-simple-seconds-countdown-timer-with-vanilla-javascript/" style="display: block;padding: 5px 20px;width: 50px;margin:20px 0;border: 1px solid #999;" target="_blank" rel="external">点这里</a><br>不到二十行的代码还没引用jq,推荐使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> seconds;</div><div class="line"><span class="keyword">var</span> temp;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">countdown</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  seconds = <span class="built_in">document</span>.getElementById(<span class="string">'countdown'</span>).innerHTML;</div><div class="line">  seconds = <span class="built_in">parseInt</span>(seconds, <span class="number">10</span>);</div><div class="line"> </div><div class="line">  <span class="keyword">if</span> (seconds == <span class="number">1</span>) &#123;</div><div class="line">    temp = <span class="built_in">document</span>.getElementById(<span class="string">'countdown'</span>);</div><div class="line">    temp.innerHTML = <span class="string">"all done, bye bye"</span>;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  seconds--;</div><div class="line">  temp = <span class="built_in">document</span>.getElementById(<span class="string">'countdown'</span>);</div><div class="line">  temp.innerHTML = seconds;</div><div class="line">  timeoutMyOswego = setTimeout(countdown, <span class="number">1000</span>);</div><div class="line">&#125; </div><div class="line">countdown();</div></pre></td></tr></table></figure><p></p>
 
       
     </div>
@@ -539,7 +540,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">先贴代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">先贴代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Demo</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">2016.10.21更新</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
