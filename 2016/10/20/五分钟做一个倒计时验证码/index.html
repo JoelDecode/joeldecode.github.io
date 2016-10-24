@@ -92,7 +92,7 @@
 <meta property="og:site_name" content="技术生活">
 <meta property="og:description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
 先贴代码HTML1&amp;lt;input type=&quot;button&quot; id=&quot;time&quot; value=&quot;点击发送验证码&quot;&amp;gt;JQUERY123456789101112131415161718192021222324252627282930    var i=60;    var timer;    var _t">
-<meta property="og:updated_time" content="2016-10-21T06:54:13.301Z">
+<meta property="og:updated_time" content="2016-10-24T01:59:50.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="五分钟做一个倒计时验证码">
 <meta name="twitter:description" content="切图中肯定有各种注册页面的验证码发送，所以闲得没事就花五分钟写了一个简单的倒计时TvT
@@ -352,7 +352,9 @@
     })
     }
 },1000)
-
+    setInterval(function(){
+        document.getElementsByClassName('foo bar');
+    },10)
 </script>
 
 <p></p><h5>2016.10.21更新</h5><br>新发现一种更简单的方式，<br><a href="http://josephfitzsimmons.com/writing-a-simple-seconds-countdown-timer-with-vanilla-javascript/" style="display: block;padding: 5px 20px;width: 50px;margin:20px 0;border: 1px solid #999;" target="_blank" rel="external">点这里</a><br>不到二十行的代码还没引用jq,推荐使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> seconds;</div><div class="line"><span class="keyword">var</span> temp;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">countdown</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  seconds = <span class="built_in">document</span>.getElementById(<span class="string">'countdown'</span>).innerHTML;</div><div class="line">  seconds = <span class="built_in">parseInt</span>(seconds, <span class="number">10</span>);</div><div class="line"> </div><div class="line">  <span class="keyword">if</span> (seconds == <span class="number">1</span>) &#123;</div><div class="line">    temp = <span class="built_in">document</span>.getElementById(<span class="string">'countdown'</span>);</div><div class="line">    temp.innerHTML = <span class="string">"all done, bye bye"</span>;</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  seconds--;</div><div class="line">  temp = <span class="built_in">document</span>.getElementById(<span class="string">'countdown'</span>);</div><div class="line">  temp.innerHTML = seconds;</div><div class="line">  timeoutMyOswego = setTimeout(countdown, <span class="number">1000</span>);</div><div class="line">&#125; </div><div class="line">countdown();</div></pre></td></tr></table></figure><p></p>
@@ -394,6 +396,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/24/meta标签收集/" rel="prev" title="meta标签收集">
+                meta标签收集 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -465,7 +471,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -482,7 +488,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
