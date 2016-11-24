@@ -2,22 +2,6 @@
 
 $(document).ready(function () {
 
-var idAddTitle = [];
-  var i = 0 ;
-  var idherefa = $(".nav li a")
-  $(".post-body h2,.post-body h1").each(function(){
-    idAddTitle = $(this).text()
-    $(this).attr('id', idAddTitle);
-    idherefa.eq(i).attr('href', '#'+idAddTitle);
-    i ++
-});
-
-
-
-
-
-
-
   initScrollSpy();
   NexT.utils.needAffix() && initAffix();
   initTOCDimension();
