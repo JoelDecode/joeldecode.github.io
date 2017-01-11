@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tool," />
+  <meta name="keywords" content="vue," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="整理一下最近和同事用的一个打包工具   gulp">
+<meta name="description" content="vue入门第一篇。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gulp初体验">
-<meta property="og:url" content="http://yoursite.com/2016/12/28/gulp初体验/index.html">
+<meta property="og:title" content="vue入门(1)">
+<meta property="og:url" content="http://yoursite.com/2017/01/11/vue入门-1/index.html">
 <meta property="og:site_name" content="虚彧">
-<meta property="og:description" content="整理一下最近和同事用的一个打包工具   gulp">
-<meta property="og:updated_time" content="2016-12-28T07:15:20.084Z">
+<meta property="og:description" content="vue入门第一篇。">
+<meta property="og:updated_time" content="2017-01-11T07:26:43.625Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gulp初体验">
-<meta name="twitter:description" content="整理一下最近和同事用的一个打包工具   gulp">
+<meta name="twitter:title" content="vue入门(1)">
+<meta name="twitter:description" content="vue入门第一篇。">
 
 
 
@@ -114,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/28/gulp初体验/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/11/vue入门-1/"/>
 
 
-  <title> gulp初体验 | 虚彧 </title>
+  <title> vue入门(1) | 虚彧 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -247,7 +247,7 @@
             
             
               
-                gulp初体验
+                vue入门(1)
               
             
           </h1>
@@ -259,8 +259,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-28T14:51:08+08:00" content="2016-12-28">
-              2016-12-28
+            <time itemprop="dateCreated" datetime="2017-01-11T14:45:47+08:00" content="2017-01-11">
+              2017-01-11
             </time>
           </span>
 
@@ -289,8 +289,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/28/gulp初体验/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/28/gulp初体验/" itemprop="commentsCount"></span>
+                <a href="/2017/01/11/vue入门-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/11/vue入门-1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -315,21 +315,34 @@
 
       
         <blockquote>
-<p>整理一下最近和同事用的一个打包工具   gulp</p>
+<p>vue入门第一篇。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="我们看看官网的介绍"><a href="#我们看看官网的介绍" class="headerlink" title="我们看看官网的介绍"></a>我们看看官网的介绍</h2><blockquote>
-<p><strong><a href="http://gulpjs.com/" target="_blank" rel="external">gulpjs</a></strong> :  易于使用 构建快速  插件高质 易于学习</p>
+<h2 id="全局安装vue-cli"><a href="#全局安装vue-cli" class="headerlink" title="全局安装vue-cli"></a>全局安装vue-cli</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g vue-cli</div></pre></td></tr></table></figure>
+<p>大概讲解一下: cmd打开之后，利用npm工具全局（-g）安装vue-cli </p>
+<blockquote>
+<p>全局安装的概念 ： 安装在默认的C盘目录下，可以在其他任意目录使用vue-cli<br>局部安装的概念 ： 安装在当前目录下，只在当前目录有效（–save）</p>
 </blockquote>
-<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><h3 id="全局安装-依赖npm"><a href="#全局安装-依赖npm" class="headerlink" title="全局安装 依赖npm"></a>全局安装 依赖npm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --global gulp</div></pre></td></tr></table></figure>
-<h3 id="为项目的开发安装"><a href="#为项目的开发安装" class="headerlink" title="为项目的开发安装"></a>为项目的开发安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save-dev gulp</div></pre></td></tr></table></figure>
-<h3 id="在项目根目录下创建一个名为-gulpfile-js-的文件"><a href="#在项目根目录下创建一个名为-gulpfile-js-的文件" class="headerlink" title="在项目根目录下创建一个名为 gulpfile.js 的文件"></a>在项目根目录下创建一个名为 gulpfile.js 的文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 将你的默认的任务代码放在这</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="执行-gulp"><a href="#执行-gulp" class="headerlink" title="执行 gulp"></a>执行 gulp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gulp</div></pre></td></tr></table></figure>
-<h3 id="配置你需要引用的插件"><a href="#配置你需要引用的插件" class="headerlink" title="配置你需要引用的插件"></a>配置你需要引用的插件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">const</span> elixir = <span class="built_in">require</span>(<span class="string">'laravel-elixir'</span>);</div><div class="line"></div><div class="line"><span class="built_in">require</span>(<span class="string">'laravel-elixir-vue-2'</span>);</div><div class="line"></div><div class="line">elixir(<span class="function">(<span class="params">mix</span>) =&gt;</span> &#123;</div><div class="line">    <span class="comment">//less 编译</span></div><div class="line">    mix.less([</div><div class="line">        <span class="string">'./resources/assets/build/less/skins/style.less'</span></div><div class="line">    ], <span class="string">'./resources/assets/css/less.css'</span>);</div><div class="line"></div><div class="line">    <span class="comment">//css编译</span></div><div class="line">    mix.styles([</div><div class="line">        <span class="string">'./resources/assets/css/style.css'</span></div><div class="line">    ],<span class="string">'public/css/app.css'</span>);</div><div class="line">    <span class="comment">//js编译</span></div><div class="line">    mix.scripts([</div><div class="line">        <span class="string">'./resources/assets/plugins/jQuery/jquery-2.2.3.min.js'</span>,</div><div class="line">    ],<span class="string">'public/js/app.js'</span>);</div><div class="line"></div><div class="line">    mix.version([<span class="string">'css/app.css'</span>,<span class="string">'js/app.js'</span>]);</div><div class="line">    </div><div class="line">    <span class="comment">//该项目使用了laravel</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="如何在项目中生成"><a href="#如何在项目中生成" class="headerlink" title="如何在项目中生成"></a>如何在项目中生成</h2><blockquote>
-<p>安装在项目中，<strong>只有在gulpfile.js文件中的文件执行gulp才会生成</strong>，其他文件无需生成。</p>
+<hr>
+<h2 id="创建一个vue项目"><a href="#创建一个vue项目" class="headerlink" title="创建一个vue项目"></a>创建一个vue项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vue init &lt;template-name&gt; &lt;project-name&gt;</div><div class="line">// &lt;template&gt;是工具名称  一般使用 webpack &lt;project-name&gt; 是项目名称  例：</div><div class="line">vue init webpack demoone</div></pre></td></tr></table></figure>
+<p>创建成功后会提示下列文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">? Project name demoone</div><div class="line">? Project description A Vue.js project</div><div class="line">? Author your name &lt;your email&gt;</div><div class="line">? Vue build standalone</div><div class="line">? Use ESLint to lint your code? No</div><div class="line">? Setup unit tests with Karma + Mocha? No</div><div class="line">? Setup e2e tests with Nightwatch? No</div><div class="line"></div><div class="line">   vue-cli · Generated &quot;demoone&quot;.</div><div class="line"></div><div class="line">   To get started:</div><div class="line"></div><div class="line">     cd demoOne</div><div class="line">     npm install</div><div class="line">     npm run dev</div><div class="line"></div><div class="line">   Documentation can be found at https://vuejs-templates.github.io/webpack</div></pre></td></tr></table></figure></p>
+<p>这里也有一些参数  比较重要 稍微讲解一下 就是后面的三个参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">? Use ESLint to lint your code? No</div><div class="line">? Setup unit tests with Karma + Mocha? No</div><div class="line">? Setup e2e tests with Nightwatch? No</div></pre></td></tr></table></figure></p>
+<p>大意是：第一个ESlint是指是否进行基本语法验证，<br>第二第三个是指是否进行单元检测；<br>由于是私人项目，我并未开启，可由实际情况决定是否开启</p>
+<hr>
+<h2 id="安装项目所需的依赖"><a href="#安装项目所需的依赖" class="headerlink" title="安装项目所需的依赖"></a>安装项目所需的依赖</h2><p>大家应该也注意到了有一个目录下有一个名为<strong>package.json</strong>的文件，该文件内部便介绍了当前项目所需的依赖，所以我们要通过以下代码进行安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>小提示，当页面使用该方法进行安装时，需进入到项目当前目录进行安装；进入当前目录，按住shift+鼠标右键有一个在此处打开命令窗口，再执行如上代码；</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ctrl+r // 输入cmd</div><div class="line"></div><div class="line">D: //输入想进入的盘符</div><div class="line"></div><div class="line">cd demo //进入项目文件夹，输入gulp即可生成</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="让你的vue跑起来"><a href="#让你的vue跑起来" class="headerlink" title="让你的vue跑起来"></a>让你的vue跑起来</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm run dev</div></pre></td></tr></table></figure>
+<p>如果自动弹出localhost:8080页面 那么恭喜你，你的vue项目已经成功的启动了</p>
+<hr>
+<p>安装其他需要的组件，vue-router,vue-resource,vuex</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install vue-router vue-resource vuex --save</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这里就用到了局部安装。</p>
+</blockquote>
+
       
     </div>
 
@@ -351,7 +364,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tool/" rel="tag">#tool</a>
+            <a href="/tags/vue/" rel="tag">#vue</a>
           
         </div>
       
@@ -360,16 +373,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/28/jquery无缝滚动，未完整demo/" rel="next" title="jquery无缝滚动，未完整demo">
-                <i class="fa fa-chevron-left"></i> jquery无缝滚动，未完整demo
+              <a href="/2016/12/30/2017计划一览表/" rel="next" title="2016的总结和2017计划一览表">
+                <i class="fa fa-chevron-left"></i> 2016的总结和2017计划一览表
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/28/利用init使html干净起来/" rel="prev" title="利用init使html干净起来">
-                利用init使html干净起来 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/11/vue入门-2/" rel="prev" title="vue入门(2)">
+                vue入门(2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -396,8 +409,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/28/gulp初体验/"
-           data-title="gulp初体验" data-url="http://yoursite.com/2016/12/28/gulp初体验/">
+      <div class="ds-thread" data-thread-key="2017/01/11/vue入门-1/"
+           data-title="vue入门(1)" data-url="http://yoursite.com/2017/01/11/vue入门-1/">
       </div>
     
   </div>
@@ -517,7 +530,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我们看看官网的介绍"><span class="nav-number">1.</span> <span class="nav-text">我们看看官网的介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装方法"><span class="nav-number">2.</span> <span class="nav-text">安装方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局安装-依赖npm"><span class="nav-number">2.1.</span> <span class="nav-text">全局安装 依赖npm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为项目的开发安装"><span class="nav-number">2.2.</span> <span class="nav-text">为项目的开发安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在项目根目录下创建一个名为-gulpfile-js-的文件"><span class="nav-number">2.3.</span> <span class="nav-text">在项目根目录下创建一个名为 gulpfile.js 的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-gulp"><span class="nav-number">2.4.</span> <span class="nav-text">执行 gulp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置你需要引用的插件"><span class="nav-number">2.5.</span> <span class="nav-text">配置你需要引用的插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何在项目中生成"><span class="nav-number">3.</span> <span class="nav-text">如何在项目中生成</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局安装vue-cli"><span class="nav-number">1.</span> <span class="nav-text">全局安装vue-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个vue项目"><span class="nav-number">2.</span> <span class="nav-text">创建一个vue项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装项目所需的依赖"><span class="nav-number">3.</span> <span class="nav-text">安装项目所需的依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让你的vue跑起来"><span class="nav-number">4.</span> <span class="nav-text">让你的vue跑起来</span></a></li></ol></div>
             
           </div>
         </section>
