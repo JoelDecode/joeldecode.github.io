@@ -1,0 +1,683 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="jquery," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="项目中曾应用过，为了响应项目中的城市需求，便自己写了一个；">
+<meta property="og:type" content="article">
+<meta property="og:title" content="做一个简单的城市联动">
+<meta property="og:url" content="http://yoursite.com/2017/02/23/做一个简单的城市联动/index.html">
+<meta property="og:site_name" content="虚彧">
+<meta property="og:description" content="项目中曾应用过，为了响应项目中的城市需求，便自己写了一个；">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/005WUpOkgy1fd0fbd5z06j30va0iqmxk.jpg">
+<meta property="og:updated_time" content="2017-02-23T08:15:11.912Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="做一个简单的城市联动">
+<meta name="twitter:description" content="项目中曾应用过，为了响应项目中的城市需求，便自己写了一个；">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/005WUpOkgy1fd0fbd5z06j30va0iqmxk.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6340758102245115000',
+      author: 'Joel'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/23/做一个简单的城市联动/"/>
+
+
+  <title> 做一个简单的城市联动 | 虚彧 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">虚彧</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">要做更好的自己。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                做一个简单的城市联动
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-23T13:54:57+08:00" content="2017-02-23">
+              2017-02-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/23/做一个简单的城市联动/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/23/做一个简单的城市联动/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+  
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>项目中曾应用过，为了响应项目中的城市需求，便自己写了一个；</p>
+<a id="more"></a>
+<h2 id="基础布局"><a href="#基础布局" class="headerlink" title="基础布局"></a>基础布局</h2><h3 id="css-部分"><a href="#css-部分" class="headerlink" title="css 部分"></a>css 部分</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*本示例代码*/</span></div><div class="line"><span class="selector-class">.layer</span>,<span class="selector-class">.layer-alert</span>&#123;<span class="attribute">display</span>: none;<span class="attribute">position</span>: fixed;<span class="attribute">top</span>: <span class="number">0</span>;<span class="attribute">left</span>: <span class="number">0</span>;<span class="attribute">width</span>: <span class="number">100%</span>;<span class="attribute">height</span>: <span class="number">100%</span>;<span class="attribute">background-color</span>: <span class="built_in">rgba</span>(0,0,0,.7);&#125;</div><div class="line"><span class="selector-class">.choice-city</span>&#123;<span class="attribute">transform</span>: <span class="built_in">translateY</span>(-50%);<span class="attribute">position</span>: relative;<span class="attribute">top</span>: <span class="number">50%</span>;<span class="attribute">width</span>: <span class="number">800px</span>;<span class="attribute">background-color</span>: <span class="number">#fff</span>;<span class="attribute">margin</span>: <span class="number">0</span> auto;<span class="attribute">overflow</span>: hidden;<span class="attribute">padding-bottom</span>: <span class="number">30px</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-tag">h1</span>&#123;<span class="attribute">text-align</span>: center;<span class="attribute">height</span>: <span class="number">40px</span>;<span class="attribute">line-height</span>: <span class="number">40px</span>;<span class="attribute">position</span>: relative;<span class="attribute">font-size</span>: <span class="number">18px</span>;<span class="attribute">color</span>: <span class="number">#333</span>;<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-tag">h1</span> <span class="selector-tag">b</span> &#123;<span class="attribute">display</span>:inline-block; <span class="attribute">width</span>:<span class="number">12px</span>; <span class="attribute">height</span>:<span class="number">2px</span>; <span class="attribute">background</span>:<span class="number">#f18d00</span>; <span class="attribute">font-size</span>:<span class="number">0</span>; <span class="attribute">line-height</span>:<span class="number">0</span>;<span class="attribute">vertical-align</span>:middle;<span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(45deg);<span class="attribute">position</span>: absolute;<span class="attribute">right</span>: <span class="number">20px</span>;<span class="attribute">top</span>: <span class="number">20px</span>;<span class="attribute">cursor</span>:pointer;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-tag">h1</span> <span class="selector-tag">b</span><span class="selector-pseudo">:after</span> &#123; <span class="attribute">content</span>:<span class="string">'.'</span>; <span class="attribute">display</span>:block; <span class="attribute">width</span>:<span class="number">12px</span>; <span class="attribute">height</span>:<span class="number">2px</span>; <span class="attribute">background</span>:<span class="number">#f18d00</span>;<span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(-90deg);&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.city</span> <span class="selector-tag">b</span> &#123;<span class="attribute">display</span>:inline-block; <span class="attribute">width</span>:<span class="number">12px</span>; <span class="attribute">height</span>:<span class="number">2px</span>; <span class="attribute">background</span>:<span class="number">#f18d00</span>; <span class="attribute">font-size</span>:<span class="number">0</span>; <span class="attribute">line-height</span>:<span class="number">0</span>;<span class="attribute">vertical-align</span>:middle;<span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(45deg);<span class="attribute">position</span>: absolute;<span class="attribute">right</span>: <span class="number">0px</span>;<span class="attribute">top</span>: <span class="number">5px</span>;<span class="attribute">cursor</span>:pointer;&#125;</div><div class="line"><span class="selector-class">.city</span> <span class="selector-tag">b</span><span class="selector-pseudo">:after</span> &#123; <span class="attribute">content</span>:<span class="string">'.'</span>; <span class="attribute">display</span>:block; <span class="attribute">width</span>:<span class="number">12px</span>; <span class="attribute">height</span>:<span class="number">2px</span>; <span class="attribute">background</span>:<span class="number">#f18d00</span>;<span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(-90deg);&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-tag">h1</span> <span class="selector-tag">b</span><span class="selector-pseudo">:before</span>&#123;<span class="attribute">content</span>: <span class="string">""</span>;<span class="attribute">width</span>: <span class="number">20px</span>;<span class="attribute">position</span>: absolute;<span class="attribute">height</span>: <span class="number">20px</span>;<span class="attribute">display</span>: block;<span class="attribute">right</span>: -<span class="number">1px</span>;<span class="attribute">top</span>: -<span class="number">9px</span>;&#125;</div><div class="line"><span class="selector-class">.input-box</span> <span class="selector-tag">span</span>&#123;<span class="attribute">display</span>:inline-block;<span class="attribute">cursor</span>: pointer;<span class="attribute">width</span>: <span class="number">80px</span>;<span class="attribute">height</span>: <span class="number">26px</span>;<span class="attribute">line-height</span>: <span class="number">26px</span>;<span class="attribute">border-radius</span>: <span class="number">3px</span>;<span class="attribute">text-align</span>: center;<span class="attribute">color</span>: <span class="number">#fff</span>;<span class="attribute">background-color</span>: <span class="number">#f18d00</span>;<span class="attribute">border</span>: none;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> &#123;<span class="attribute">margin-top</span>: <span class="number">30px</span>;<span class="attribute">height</span>: <span class="number">300px</span>;<span class="attribute">overflow-y</span>:scroll;<span class="attribute">width</span>: <span class="number">50%</span>;<span class="attribute">float</span>: left;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> <span class="selector-class">.input-box</span>&#123;<span class="attribute">margin-left</span>: <span class="number">40px</span>;<span class="attribute">margin-bottom</span>: <span class="number">15px</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> <span class="selector-class">.input-box</span> <span class="selector-tag">label</span>&#123;<span class="attribute">width</span>: <span class="number">80px</span>;<span class="attribute">display</span>: inline-block;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> <span class="selector-class">.input-box</span> <span class="selector-tag">select</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">left</span>: -<span class="number">4px</span>;<span class="attribute">height</span>: <span class="number">25px</span>;<span class="attribute">line-height</span>: <span class="number">25px</span>;<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;<span class="attribute">padding-left</span>: <span class="number">10px</span>;<span class="attribute">font-size</span>: <span class="number">14px</span>;<span class="attribute">width</span>: <span class="number">213px</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> <span class="selector-class">.input-box</span> <span class="selector-tag">input</span>&#123;<span class="attribute">height</span>: <span class="number">25px</span>;<span class="attribute">line-height</span>: <span class="number">25px</span>;<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;<span class="attribute">padding-left</span>: <span class="number">10px</span>;<span class="attribute">font-size</span>: <span class="number">14px</span>;<span class="attribute">width</span>: <span class="number">123px</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> <span class="selector-tag">ul</span>&#123;<span class="attribute">margin-left</span>: <span class="number">40px</span>;<span class="attribute">width</span>: <span class="number">300px</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.choice</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span>,<span class="selector-class">.city-content</span> <span class="selector-tag">li</span>&#123;<span class="attribute">box-sizing</span>: border-box;<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;<span class="attribute">position</span>: relative;<span class="attribute">width</span>: <span class="number">65px</span>;<span class="attribute">height</span>: <span class="number">40px</span>;<span class="attribute">cursor</span>: pointer;<span class="attribute">margin-bottom</span>: <span class="number">10px</span>;<span class="attribute">margin-right</span>: <span class="number">6px</span>;<span class="attribute">background-color</span>: <span class="number">#f2f2f2</span>;<span class="attribute">text-align</span>: center;<span class="attribute">line-height</span>: <span class="number">40px</span>;<span class="attribute">display</span>: inline-block;<span class="attribute">overflow</span>: hidden;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.city</span>&#123;<span class="attribute">width</span>: <span class="number">47%</span>;<span class="attribute">float</span>: left;<span class="attribute">margin-top</span>: <span class="number">30px</span>;<span class="attribute">overflow-y</span>:scroll;<span class="attribute">margin-left</span>: <span class="number">15px</span>;<span class="attribute">height</span>: <span class="number">300px</span>;&#125;</div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-class">.city</span> <span class="selector-tag">h5</span>&#123;<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;<span class="attribute">display</span>: block;<span class="attribute">padding-bottom</span>: <span class="number">10px</span>;<span class="attribute">margin-bottom</span>: <span class="number">10px</span>;&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.choice-city</span> <span class="selector-tag">input</span><span class="selector-attr">[type="submit"]</span>&#123;<span class="attribute">display</span>: inline-block;<span class="attribute">width</span>: <span class="number">130px</span>;<span class="attribute">height</span>: <span class="number">40px</span>;<span class="attribute">line-height</span>: <span class="number">40px</span>;<span class="attribute">background-color</span>:<span class="number">#f18d00</span>;<span class="attribute">color</span>: <span class="number">#fff</span>;<span class="attribute">text-align</span>: center;<span class="attribute">font-size</span>: <span class="number">14px</span>;<span class="attribute">margin</span>: <span class="number">0</span> auto;<span class="attribute">border-radius</span>: <span class="number">3px</span>;<span class="attribute">border</span>: none;<span class="attribute">position</span>: relative;<span class="attribute">left</span>: <span class="number">50%</span>;<span class="attribute">margin-left</span>:-<span class="number">65px</span>;<span class="attribute">top</span>: <span class="number">20px</span>;<span class="attribute">margin-bottom</span>: <span class="number">10px</span>;<span class="attribute">margin-top</span>: <span class="number">10px</span>;&#125;</div><div class="line"><span class="selector-class">.choice</span><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;<span class="attribute">width</span>: <span class="number">8px</span>;&#125;</div><div class="line"><span class="selector-class">.choice</span><span class="selector-pseudo">::-webkit-scrollbar-track</span> &#123;<span class="attribute">background-color</span>:<span class="number">#fff</span>;<span class="attribute">-webkit-border-radius</span>: <span class="number">2em</span>;<span class="attribute">-moz-border-radius</span>: <span class="number">2em</span>;<span class="attribute">border-radius</span>:<span class="number">2em</span>;<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ccc</span>;&#125;</div><div class="line"><span class="selector-class">.choice</span><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;<span class="attribute">background-color</span>: <span class="number">#F90</span>;<span class="attribute">background-image</span>: <span class="built_in">-webkit-linear-gradient</span>(45deg,  rgba(255, 255, 255, .4) <span class="number">25%</span>,  transparent <span class="number">25%</span>,  transparent <span class="number">50%</span>,  <span class="built_in">rgba</span>(255, 255, 255, .4) <span class="number">50%</span>,  <span class="built_in">rgba</span>(255, 255, 255, .4) <span class="number">75%</span>,  transparent <span class="number">75%</span>,  transparent);<span class="attribute">-webkit-border-radius</span>: <span class="number">2em</span>;<span class="attribute">-moz-border-radius</span>: <span class="number">2em</span>;<span class="attribute">border-radius</span>:<span class="number">2em</span>;&#125;</div><div class="line"><span class="selector-class">.city</span><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;<span class="attribute">width</span>: <span class="number">8px</span>;&#125;</div><div class="line"><span class="selector-class">.city</span><span class="selector-pseudo">::-webkit-scrollbar-track</span> &#123;<span class="attribute">background-color</span>:<span class="number">#fff</span>;<span class="attribute">-webkit-border-radius</span>: <span class="number">2em</span>;<span class="attribute">-moz-border-radius</span>: <span class="number">2em</span>;<span class="attribute">border-radius</span>:<span class="number">2em</span>;<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#ccc</span>;&#125;</div><div class="line"><span class="selector-class">.city</span><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;<span class="attribute">background-color</span>: <span class="number">#F90</span>;<span class="attribute">background-image</span>: <span class="built_in">-webkit-linear-gradient</span>(45deg,  rgba(255, 255, 255, .4) <span class="number">25%</span>,  transparent <span class="number">25%</span>,  transparent <span class="number">50%</span>,  <span class="built_in">rgba</span>(255, 255, 255, .4) <span class="number">50%</span>,  <span class="built_in">rgba</span>(255, 255, 255, .4) <span class="number">75%</span>,  transparent <span class="number">75%</span>,  transparent);<span class="attribute">-webkit-border-radius</span>: <span class="number">2em</span>;<span class="attribute">-moz-border-radius</span>: <span class="number">2em</span>;<span class="attribute">border-radius</span>:<span class="number">2em</span>;&#125;</div></pre></td></tr></table></figure>
+<h3 id="html-部分"><a href="#html-部分" class="headerlink" title="html 部分"></a>html 部分</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"layer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"choice-city"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>选择城市<span class="tag">&lt;<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"choice"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"input-box"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">""</span>&gt;</span>城市名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"search"</span> /&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"search"</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"input-box"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"city"</span>&gt;</span>选择省份<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"city"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>菠萝市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>桃子市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>菠萝市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>桃子市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>菠萝市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>桃子市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>香蕉市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>菠萝市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>苹果市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>西瓜市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span>桃子市<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"city"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> /&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="布局完成"><a href="#布局完成" class="headerlink" title="布局完成~"></a>布局完成~</h3><p>如果你的页面已经是这个样子，那么我们就可以一起愉快的写jQuery啦~~<br><img src="http://wx2.sinaimg.cn/mw690/005WUpOkgy1fd0fbd5z06j30va0iqmxk.jpg" alt="如图所示" title="如图所示"></p>
+<hr>
+<h2 id="由于jQuery的部分过多，我们分段理解一下"><a href="#由于jQuery的部分过多，我们分段理解一下" class="headerlink" title="由于jQuery的部分过多，我们分段理解一下"></a>由于jQuery的部分过多，我们分段理解一下</h2><h3 id="先拟定一组假的json数据"><a href="#先拟定一组假的json数据" class="headerlink" title="先拟定一组假的json数据"></a>先拟定一组假的json数据</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cityData=&#123;          		 <span class="comment">//假的json数据</span></div><div class="line">       <span class="string">"辽宁"</span> : [</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"沈阳"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"大连"</span>&#125;</div><div class="line">       ],</div><div class="line">       <span class="string">"东京"</span> : [</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"东城区"</span>&#125;,</div><div class="line">           &#123;<span class="string">"city"</span> : <span class="string">"西城区"</span>&#125;</div><div class="line">       ]</div><div class="line">   &#125;;</div></pre></td></tr></table></figure>
+<h3 id="第一步，先用cityData的key渲染option"><a href="#第一步，先用cityData的key渲染option" class="headerlink" title="第一步，先用cityData的key渲染option"></a>第一步，先用cityData的key渲染option</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.each(cityData,<span class="function"><span class="keyword">function</span>(<span class="params">index, val</span>) </span>&#123;  <span class="comment">//用each渲染json中的key   即index；</span></div><div class="line">    $(<span class="string">"#city"</span>).append(<span class="string">'&lt;option value="'</span>+index+<span class="string">'"&gt;'</span>+index+<span class="string">'&lt;/option&gt;'</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="第二步，select的change改变li的内容"><a href="#第二步，select的change改变li的内容" class="headerlink" title="第二步，select的change改变li的内容"></a>第二步，select的change改变li的内容</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#city"</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;   <span class="comment">//  select change事件</span></div><div class="line"></div><div class="line"> <span class="keyword">var</span> thisVal = $(<span class="keyword">this</span>).val();</div><div class="line"> $(<span class="string">".choice ul"</span>).html(<span class="string">""</span>);  <span class="comment">//每次change清空ul里的li</span></div><div class="line"> <span class="keyword">var</span> html = <span class="string">''</span>;   <span class="comment">//定义一个空的变量</span></div><div class="line"></div><div class="line"> $.each(cityData[thisVal],<span class="function"><span class="keyword">function</span>(<span class="params">index, val</span>) </span>&#123;</div><div class="line">   html = html + <span class="string">'&lt;li&gt;'</span>+ val.city +<span class="string">'&lt;/li&gt;'</span>   <span class="comment">//将所有的值统一导入至html变量中</span></div><div class="line"> &#125;);</div><div class="line"></div><div class="line"> $(<span class="string">".choice ul"</span>).html(html); <span class="comment">// 一次性将li添加至ul中</span></div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>这里讲一下，为了提升效率，能避免重复使用jQuery选择器的地方尽量少用jQuery的选择器。所以我在each内把值都赋给html这个变量之中</p>
+</blockquote>
+<h3 id="第三步，li的点击传参事件"><a href="#第三步，li的点击传参事件" class="headerlink" title="第三步，li的点击传参事件"></a>第三步，li的点击传参事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).on(<span class="string">'click'</span>, <span class="string">'.choice li'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;  <span class="comment">//城市传参事件</span></div><div class="line"></div><div class="line">  <span class="keyword">var</span> thisHtml  = $(<span class="keyword">this</span>).text();</div><div class="line">  <span class="keyword">var</span> existence = $(<span class="string">'#city'</span>).val();</div><div class="line"></div><div class="line">  $(<span class="string">".city"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">index, el</span>) </span>&#123;</div><div class="line"></div><div class="line">      <span class="keyword">if</span> ($(<span class="keyword">this</span>).find(<span class="string">'.city-content'</span>).hasClass(existence)) &#123;  <span class="comment">//判断右侧是否已有城市的class</span></div><div class="line">        addCity(thisHtml,existence);  <span class="comment">//将城市和值传参至addCity</span></div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        addDiv(existence,$(<span class="string">'#city option:selected'</span>).text(),thisHtml);  <span class="comment">//将城市和选中值传参至addDiv</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">  &#125;);</div><div class="line"></div><div class="line">  $(<span class="keyword">this</span>).animate(&#123;<span class="attr">height</span>:<span class="number">0</span>&#125;, <span class="number">200</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// 动画消失;</span></div><div class="line">    $(<span class="keyword">this</span>).remove();</div><div class="line">  &#125;);</div><div class="line">	</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addCity</span>(<span class="params">thisVal,divClass</span>)</span>&#123;		 <span class="comment">// 遍历城市  两种遍历方式</span></div><div class="line"></div><div class="line">  <span class="keyword">var</span> ele = $(<span class="string">'&lt;li&gt;'</span>+thisVal+<span class="string">'&lt;b&gt;&lt;/b&gt;&lt;/li&gt;'</span>)  </div><div class="line">  $(<span class="string">"."</span>+divClass+<span class="string">" ul"</span>).append(ele);	<span class="comment">//把值添加到ul中</span></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addDiv</span>(<span class="params">cityName,cityNameCn,thisVal</span>)</span>&#123;</div><div class="line">  $(<span class="string">".city"</span>).append(<span class="string">'&lt;div class="city-content '</span> + cityName +<span class="string">' "&gt;&lt;h5&gt;'</span>+ cityNameCn +<span class="string">'&lt;/h5&gt;&lt;ul&gt;&lt;li&gt;'</span>+ thisVal +<span class="string">'&lt;b&gt;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;'</span>);  </div><div class="line">	<span class="comment">//添加一个新的城市</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="最后一步，右侧删除"><a href="#最后一步，右侧删除" class="headerlink" title="最后一步，右侧删除"></a>最后一步，右侧删除</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="string">".city"</span>).on(<span class="string">'click'</span>, <span class="string">'li'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;	<span class="comment">//城市删除事件</span></div><div class="line">  $(<span class="keyword">this</span>).animate(&#123;<span class="attr">width</span>:<span class="number">0</span>&#125;, <span class="number">200</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> parentClass = $(<span class="keyword">this</span>).parents(<span class="string">".city-content"</span>).attr(<span class="string">'class'</span>);</div><div class="line">        parentClass = parentClass.replace(<span class="string">"city-content"</span>, <span class="string">""</span>).replace(<span class="regexp">/\ +/g</span>,<span class="string">""</span>);</div><div class="line"></div><div class="line">        <span class="keyword">if</span> ($(<span class="string">"."</span>+parentClass+<span class="string">" li"</span>).length &gt; <span class="number">1</span>) &#123;  <span class="comment">//如果右侧数量大于1 那么直接进行删除</span></div><div class="line">           $(<span class="keyword">this</span>).remove();</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">        $(<span class="string">"."</span>+parentClass).animate(&#123;<span class="attr">option</span>:<span class="number">0</span>&#125;, <span class="number">200</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        	<span class="comment">//如果右侧数量小于1 那么进行删除父级div</span></div><div class="line">           $(<span class="keyword">this</span>).remove();</div><div class="line">      &#125;)</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>很小的一个东西，逻辑确实也蛮麻烦，不过确实是也让我学到了一些东西，关于传参的一些应用也更熟练了，慢慢来吧。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jquery/" rel="tag">#jquery</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/11/vue入门-2/" rel="next" title="vue入门(2)">
+                <i class="fa fa-chevron-left"></i> vue入门(2)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/23/css-inline-block的可恶边距/" rel="prev" title="css inline-block的可恶边距">
+                css inline-block的可恶边距 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/23/做一个简单的城市联动/"
+           data-title="做一个简单的城市联动" data-url="http://yoursite.com/2017/02/23/做一个简单的城市联动/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="JoelDecode" />
+          <p class="site-author-name" itemprop="name">JoelDecode</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/JoelDecode" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5451137236/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/chen-mo-67-19-64" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-hand-o-right"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础布局"><span class="nav-number">1.</span> <span class="nav-text">基础布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-部分"><span class="nav-number">1.1.</span> <span class="nav-text">css 部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html-部分"><span class="nav-number">1.2.</span> <span class="nav-text">html 部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布局完成"><span class="nav-number">1.3.</span> <span class="nav-text">布局完成~</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#由于jQuery的部分过多，我们分段理解一下"><span class="nav-number">2.</span> <span class="nav-text">由于jQuery的部分过多，我们分段理解一下</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先拟定一组假的json数据"><span class="nav-number">2.1.</span> <span class="nav-text">先拟定一组假的json数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步，先用cityData的key渲染option"><span class="nav-number">2.2.</span> <span class="nav-text">第一步，先用cityData的key渲染option</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步，select的change改变li的内容"><span class="nav-number">2.3.</span> <span class="nav-text">第二步，select的change改变li的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步，li的点击传参事件"><span class="nav-number">2.4.</span> <span class="nav-text">第三步，li的点击传参事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后一步，右侧删除"><span class="nav-number">2.5.</span> <span class="nav-text">最后一步，右侧删除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">JoelDecode</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"joeldecode"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  
+</body>
+</html>
